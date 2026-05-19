@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Terms &amp; Conditions — Dukan Daftar</title>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Satoshi:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+:root{
+  --blue:#0A4BBA;--blue2:#082E73;--cyan:#00C8E0;
+  --green:#059669;--gold:#F59E0B;--red:#DC2626;
+  --bg:#F2F6FF;--card:#fff;
+  --border:#DDE8FF;--text:#05101F;--sub:#4E6080;--sub2:#8FA0C0;
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px;}
+body{font-family:'Satoshi',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;}
+
+/* ── NAV ── */
+nav{
+  background:linear-gradient(135deg,var(--blue2),#0A3A8A);
+  padding:14px 6%;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 20px rgba(0,0,0,0.3);
+}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo-box{width:36px;height:36px;border-radius:11px;overflow:hidden;flex-shrink:0;}
+.nav-logo-name{font-family:'Cabinet Grotesk',sans-serif;font-size:18px;font-weight:900;color:#fff;letter-spacing:-0.4px;}
+.nav-logo-name span{color:var(--cyan);}
+.nav-links{display:flex;align-items:center;gap:12px;}
+.nav-back{color:rgba(255,255,255,0.65);font-size:13px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:5px;transition:color .2s;padding:7px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.15);}
+.nav-back:hover{color:#fff;background:rgba(255,255,255,0.08);}
+.nav-pp{color:var(--cyan);font-size:13px;font-weight:600;text-decoration:none;transition:opacity .2s;}
+.nav-pp:hover{opacity:0.7;}
+
+/* ── HERO ── */
+.tc-hero{
+  background:linear-gradient(160deg,var(--blue2),#0A3A8A,#1565C0);
+  padding:64px 6% 52px;text-align:center;position:relative;overflow:hidden;
+}
+.tc-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 120%,rgba(0,200,224,0.1),transparent 55%);}
+.tc-hero::after{content:'';position:absolute;top:-60px;right:-60px;width:250px;height:250px;border-radius:50%;background:rgba(245,158,11,0.06);pointer-events:none;}
+.tc-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);border-radius:100px;padding:6px 18px;font-size:12px;font-weight:700;color:var(--gold);margin-bottom:20px;letter-spacing:1px;}
+.tc-title{font-family:'Cabinet Grotesk',sans-serif;font-size:clamp(30px,5vw,52px);font-weight:900;color:#fff;letter-spacing:-1.5px;margin-bottom:10px;}
+.tc-sub{font-size:15px;color:rgba(255,255,255,0.58);margin-bottom:6px;}
+.tc-date{font-size:13px;color:rgba(255,255,255,0.38);}
+.tc-urdu{font-family:'Noto Nastaliq Urdu',serif;font-size:16px;color:rgba(255,255,255,0.45);direction:rtl;margin-top:10px;}
+
+/* ── KEY BOXES ── */
+.tc-main{max-width:840px;margin:0 auto;padding:56px 5% 80px;}
+.tc-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:40px;}
+.ts{background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px;text-align:center;}
+.ts-icon{font-size:26px;margin-bottom:8px;}
+.ts-title{font-family:'Cabinet Grotesk',sans-serif;font-size:13px;font-weight:800;color:var(--text);margin-bottom:4px;}
+.ts-desc{font-size:12px;color:var(--sub);line-height:1.5;}
+
+/* ── TOC ── */
+.toc{background:#fff;border:1px solid var(--border);border-radius:20px;padding:26px 30px;margin-bottom:44px;}
+.toc-title{font-family:'Cabinet Grotesk',sans-serif;font-size:15px;font-weight:900;color:var(--text);margin-bottom:14px;}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+.toc-item{display:flex;align-items:center;gap:8px;text-decoration:none;padding:7px 10px;border-radius:9px;transition:background .2s;}
+.toc-item:hover{background:var(--bg);}
+.toc-num{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#1565C0);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0;}
+.toc-text{font-size:13px;font-weight:600;color:var(--blue);}
+
+/* ── SECTION ── */
+.tc-section{margin-bottom:44px;scroll-margin-top:85px;}
+.tc-sec-hdr{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.tc-sec-n{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#1565C0);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cabinet Grotesk',sans-serif;font-size:14px;font-weight:900;flex-shrink:0;}
+.tc-sec-title{font-family:'Cabinet Grotesk',sans-serif;font-size:22px;font-weight:900;color:var(--text);letter-spacing:-0.4px;}
+.tc-p{font-size:15px;color:var(--sub);margin-bottom:14px;line-height:1.75;}
+.tc-p strong{color:var(--text);font-weight:700;}
+.tc-p:last-child{margin-bottom:0;}
+
+/* ── BOXES ── */
+.tc-box{background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0;}
+.tc-box-title{font-size:12.5px;font-weight:800;color:var(--text);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:7px;}
+.tc-list{display:flex;flex-direction:column;gap:8px;}
+.tc-li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--sub);line-height:1.65;}
+.tc-li-dot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;margin-top:1px;}
+.li-blue{background:rgba(10,75,186,0.1);color:var(--blue);}
+.li-green{background:rgba(5,150,105,0.1);color:var(--green);}
+.li-red{background:rgba(220,38,38,0.1);color:var(--red);}
+.li-gold{background:rgba(245,158,11,0.1);color:var(--gold);}
+
+.tc-highlight{background:linear-gradient(135deg,rgba(10,75,186,0.05),rgba(0,200,224,0.03));border:1px solid rgba(10,75,186,0.14);border-radius:14px;padding:16px 20px;margin:14px 0;display:flex;gap:12px;align-items:flex-start;}
+.tc-highlight-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.tc-highlight-text{font-size:14px;color:var(--sub);line-height:1.68;}
+.tc-highlight-text strong{color:var(--text);font-weight:700;}
+
+.tc-warn{background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.2);border-radius:14px;padding:16px 20px;margin:14px 0;display:flex;gap:12px;align-items:flex-start;}
+.tc-warn-icon{font-size:20px;flex-shrink:0;}
+.tc-warn-text{font-size:14px;color:#92400E;line-height:1.68;}
+
+/* ── DIVIDER ── */
+.tc-divider{height:1px;background:var(--border);margin:32px 0;}
+
+/* ── CONTACT ── */
+.tc-contact{background:linear-gradient(135deg,var(--blue2),var(--blue));border-radius:20px;padding:32px;text-align:center;margin-top:44px;}
+.tc-contact-title{font-family:'Cabinet Grotesk',sans-serif;font-size:20px;font-weight:900;color:#fff;margin-bottom:8px;}
+.tc-contact-sub{font-size:14px;color:rgba(255,255,255,0.58);margin-bottom:20px;line-height:1.65;}
+.tc-contact-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.tc-btn{padding:10px 22px;border-radius:12px;font-size:13px;font-weight:700;text-decoration:none;transition:transform .2s;}
+.tc-btn:hover{transform:translateY(-2px);}
+.tc-btn.primary{background:#fff;color:var(--blue);}
+.tc-btn.outline{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;}
+
+/* ── FOOTER ── */
+.tc-footer{background:var(--blue2);padding:24px 6%;text-align:center;}
+.tc-footer-text{font-size:12.5px;color:rgba(255,255,255,0.35);}
+.tc-footer-links{display:flex;gap:20px;justify-content:center;margin-top:8px;flex-wrap:wrap;}
+.tc-footer-link{font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color .2s;}
+.tc-footer-link:hover{color:rgba(255,255,255,0.7);}
+.tc-footer-urdu{font-family:'Noto Nastaliq Urdu',serif;font-size:12px;color:rgba(255,255,255,0.25);direction:rtl;margin-top:6px;}
+
+@media(max-width:640px){
+  .tc-summary{grid-template-columns:1fr;}
+  .toc-grid{grid-template-columns:1fr;}
+  .nav-links{gap:8px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-box">
+      <svg width="36" height="36" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="nlb" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0D3B6E"/><stop offset="100%" stop-color="#1565A8"/></linearGradient>
+          <linearGradient id="nlr" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#02C7DD"/><stop offset="100%" stop-color="#0199B0"/></linearGradient>
+        </defs>
+        <rect x="12" y="12" width="1000" height="1000" rx="200" fill="url(#nlb)"/>
+        <polygon points="200,340 512,120 824,340" fill="url(#nlr)"/>
+        <rect x="196" y="336" width="632" height="480" rx="10" fill="white" opacity="0.92"/>
+        <polygon points="182,388 842,388 820,458 204,458" fill="url(#nlr)"/>
+        <rect x="280" y="484" width="464" height="84" rx="12" fill="#0F4C75"/>
+        <text x="512" y="541" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="800" fill="#02C7DD" letter-spacing="4">DD</text>
+        <circle cx="225" cy="368" r="52" fill="#FEDF33"/>
+        <text x="225" y="383" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="900" fill="#7A4F00">₨</text>
+      </svg>
+    </div>
+    <div class="nav-logo-name">Dukan <span>Daftar</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="privacy_policy.html" class="nav-pp">🔒 Privacy Policy</a>
+    <a href="index.html" class="nav-back">← Website</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="tc-hero">
+  <div class="tc-badge">📜 Terms &amp; Conditions</div>
+  <h1 class="tc-title">Terms &amp; Conditions</h1>
+  <p class="tc-sub">Dukan Daftar — Shop Management Application</p>
+  <p class="tc-date">Last Updated: May 14, 2026 &nbsp;·&nbsp; Effective: May 14, 2026</p>
+  <div class="tc-urdu">شرائط و ضوابط — دکان دفتر ایپلیکیشن</div>
+</div>
+
+<!-- MAIN -->
+<div class="tc-main">
+
+  <!-- Summary Cards -->
+  <div class="tc-summary">
+    <div class="ts">
+      <div class="ts-icon">✅</div>
+      <div class="ts-title">Free to Download</div>
+      <div class="ts-desc">App is free on Play Store. Paid plans unlock advanced features.</div>
+    </div>
+    <div class="ts">
+      <div class="ts-icon">💾</div>
+      <div class="ts-title">Your Data is Yours</div>
+      <div class="ts-desc">All business data belongs to you. We never claim ownership.</div>
+    </div>
+    <div class="ts">
+      <div class="ts-icon">🚫</div>
+      <div class="ts-title">No Misuse</div>
+      <div class="ts-desc">App must be used for lawful business purposes only.</div>
+    </div>
+  </div>
+
+  <div class="tc-highlight">
+    <div class="tc-highlight-icon">ℹ️</div>
+    <div class="tc-highlight-text"><strong>Please read carefully.</strong> By downloading, installing, or using Dukan Daftar, you agree to these Terms &amp; Conditions. If you do not agree, please do not use the app. These terms apply to all users — individual shop owners, business owners, and their staff.</div>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <div class="toc-title">📋 Table of Contents</div>
+    <div class="toc-grid">
+      <a href="#t1" class="toc-item"><div class="toc-num">1</div><div class="toc-text">Acceptance of Terms</div></a>
+      <a href="#t2" class="toc-item"><div class="toc-num">2</div><div class="toc-text">Description of Service</div></a>
+      <a href="#t3" class="toc-item"><div class="toc-num">3</div><div class="toc-text">Subscription Plans &amp; Payment</div></a>
+      <a href="#t4" class="toc-item"><div class="toc-num">4</div><div class="toc-text">User Account &amp; Security</div></a>
+      <a href="#t5" class="toc-item"><div class="toc-num">5</div><div class="toc-text">Acceptable Use Policy</div></a>
+      <a href="#t6" class="toc-item"><div class="toc-num">6</div><div class="toc-text">Your Data &amp; Content</div></a>
+      <a href="#t7" class="toc-item"><div class="toc-num">7</div><div class="toc-text">Hardware &amp; Device Terms</div></a>
+      <a href="#t8" class="toc-item"><div class="toc-num">8</div><div class="toc-text">Intellectual Property</div></a>
+      <a href="#t9" class="toc-item"><div class="toc-num">9</div><div class="toc-text">Limitation of Liability</div></a>
+      <a href="#t10" class="toc-item"><div class="toc-num">10</div><div class="toc-text">Termination</div></a>
+      <a href="#t11" class="toc-item"><div class="toc-num">11</div><div class="toc-text">Governing Law</div></a>
+      <a href="#t12" class="toc-item"><div class="toc-num">12</div><div class="toc-text">Changes to Terms</div></a>
+      <a href="#t13" class="toc-item"><div class="toc-num">13</div><div class="toc-text">Contact Information</div></a>
+    </div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="tc-section" id="t1">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">1</div><div class="tc-sec-title">Acceptance of Terms</div></div>
+    <p class="tc-p">By accessing or using the Dukan Daftar mobile application ("the App"), available on Google Play Store and Apple App Store, you confirm that you have read, understood, and agree to be bound by these Terms and Conditions ("Terms").</p>
+    <p class="tc-p">These Terms constitute a legally binding agreement between you ("User") and Dukan Daftar ("we", "us", "our"). If you are using the App on behalf of a business, you represent that you have the authority to bind that business to these Terms.</p>
+    <div class="tc-highlight">
+      <div class="tc-highlight-icon">📱</div>
+      <div class="tc-highlight-text"><strong>By clicking "Install" on the Play Store or App Store, or by opening the app for the first time, you accept these Terms in full.</strong> If you disagree with any part, you should not use the app and should uninstall it.</div>
+    </div>
+  </div>
+
+  <div class="tc-divider"></div>
+
+  <!-- SECTION 2 -->
+  <div class="tc-section" id="t2">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">2</div><div class="tc-sec-title">Description of Service</div></div>
+    <p class="tc-p">Dukan Daftar is a shop management application designed for small and medium retail businesses in Pakistan. The app provides the following core services:</p>
+    <div class="tc-box">
+      <div class="tc-box-title">📦 Core Features</div>
+      <div class="tc-list">
+        <div class="tc-li"><div class="tc-li-dot li-blue">✓</div>Point of Sale (POS) — quick sale and transaction recording</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">✓</div>Credit Book (Khata) — customer credit and debt tracking</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">✓</div>Inventory management — product catalog, stock levels, barcode scanning</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">✓</div>Supplier management and purchase order tracking</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">✓</div>Expense tracking and financial reports</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">✓</div>Data backup — local storage and optional Google Drive cloud backup</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">✓</div>Thermal receipt printing (Enterprise plan — with compatible hardware)</div>
+      </div>
+    </div>
+    <p class="tc-p">We reserve the right to modify, add, or remove features at any time. Significant changes will be communicated via in-app notifications or email.</p>
+  </div>
+
+  <div class="tc-divider"></div>
+
+  <!-- SECTION 3 -->
+  <div class="tc-section" id="t3">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">3</div><div class="tc-sec-title">Subscription Plans &amp; Payment</div></div>
+    <p class="tc-p">Dukan Daftar offers three subscription tiers. Features vary by plan, and you may upgrade or change plans at any time.</p>
+    <div class="tc-box">
+      <div class="tc-box-title">💰 Subscription Plans</div>
+      <div class="tc-list">
+        <div class="tc-li"><div class="tc-li-dot li-green">₨</div><strong>Starter Plan — ₨499/month:</strong> Basic POS sale, stock management, daily records, local backup.</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">₨</div><strong>Business Plan — ₨999/month:</strong> All Starter features + Credit Khata, Supplier Management, Barcode Scanner, Purchase Tracking, Expense Tracking.</div>
+        <div class="tc-li"><div class="tc-li-dot li-gold">₨</div><strong>Enterprise Plan — ₨1,999/month:</strong> All Business features + Thermal Printer, Advanced Reports, SIM-based SMS, Android &amp; iOS installation service, Google Drive Backup, Priority Support.</div>
+      </div>
+    </div>
+    <div class="tc-box">
+      <div class="tc-box-title">📋 Payment Terms</div>
+      <div class="tc-list">
+        <div class="tc-li"><div class="tc-li-dot li-blue">→</div>Subscriptions are billed monthly. Payment is due at the start of each billing period.</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">→</div>Payments are processed via bank transfer, JazzCash, EasyPaisa, or other agreed methods.</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">→</div>All prices are in Pakistani Rupees (PKR) and are inclusive of applicable taxes.</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">→</div>We reserve the right to change pricing with 30 days' prior notice.</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>No refunds are issued for partially used subscription periods, except in cases of our technical failure.</div>
+      </div>
+    </div>
+    <div class="tc-highlight">
+      <div class="tc-highlight-icon">🎁</div>
+      <div class="tc-highlight-text"><strong>3-Month Free Offer:</strong> Users who purchase an approved POS hardware device through Dukan Daftar receive 3 months of the Business Plan at no charge. This offer is non-transferable, valid once per device, and cannot be combined with other promotions.</div>
+    </div>
+  </div>
+
+  <div class="tc-divider"></div>
+
+  <!-- SECTION 4 -->
+  <div class="tc-section" id="t4">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">4</div><div class="tc-sec-title">User Account &amp; Security</div></div>
+    <p class="tc-p">Dukan Daftar is designed as a single-device, single-shop application. Each installation is tied to one shop. You are responsible for:</p>
+    <div class="tc-box">
+      <div class="tc-list">
+        <div class="tc-li"><div class="tc-li-dot li-blue">✓</div>Keeping your PIN code confidential and not sharing it with unauthorized persons</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">✓</div>All activity that occurs under your app installation</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">✓</div>Maintaining regular backups of your data</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">✓</div>Notifying us immediately if you suspect unauthorized access to your account</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>We are not liable for data loss resulting from a forgotten PIN or failure to take backups</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tc-divider"></div>
+
+  <!-- SECTION 5 -->
+  <div class="tc-section" id="t5">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">5</div><div class="tc-sec-title">Acceptable Use Policy</div></div>
+    <p class="tc-p">You agree to use Dukan Daftar only for lawful, legitimate retail and business management purposes. The following uses are strictly prohibited:</p>
+    <div class="tc-box">
+      <div class="tc-box-title">🚫 Prohibited Uses</div>
+      <div class="tc-list">
+        <div class="tc-li"><div class="tc-li-dot li-red">✗</div>Using the app to record or facilitate any illegal transaction, money laundering, or tax evasion</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">✗</div>Reverse engineering, decompiling, or attempting to extract the app's source code</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">✗</div>Reselling, sublicensing, or redistributing the app or your subscription to third parties</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">✗</div>Using automated scripts or bots to interact with the app</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">✗</div>Attempting to hack, disrupt, or interfere with the app or its servers</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">✗</div>Entering false, misleading, or fraudulent business information</div>
+      </div>
+    </div>
+    <p class="tc-p">Violation of this policy may result in immediate termination of your subscription without refund.</p>
+  </div>
+
+  <div class="tc-divider"></div>
+
+  <!-- SECTION 6 -->
+  <div class="tc-section" id="t6">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">6</div><div class="tc-sec-title">Your Data &amp; Content</div></div>
+    <p class="tc-p"><strong>Your business data belongs entirely to you.</strong> This includes all products, customer records, sales transactions, supplier information, and financial records you enter into the app.</p>
+    <div class="tc-box">
+      <div class="tc-list">
+        <div class="tc-li"><div class="tc-li-dot li-green">✓</div>You retain full ownership of all data you enter into Dukan Daftar</div>
+        <div class="tc-li"><div class="tc-li-dot li-green">✓</div>We do not access, sell, share, or use your business data for any commercial purpose</div>
+        <div class="tc-li"><div class="tc-li-dot li-green">✓</div>You can export and delete your data at any time</div>
+        <div class="tc-li"><div class="tc-li-dot li-green">✓</div>Uninstalling the app permanently removes all local data from your device</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>We are not responsible for data loss due to device failure, theft, or user error — please take regular backups</div>
+      </div>
+    </div>
+    <div class="tc-warn">
+      <div class="tc-warn-icon">⚠️</div>
+      <div class="tc-warn-text"><strong>Important:</strong> Dukan Daftar is an offline-first app. We do not maintain server-side copies of your data. If your device is lost, stolen, or reset without a prior backup, your data cannot be recovered by us.</div>
+    </div>
+  </div>
+
+  <div class="tc-divider"></div>
+
+  <!-- SECTION 7 -->
+  <div class="tc-section" id="t7">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">7</div><div class="tc-sec-title">Hardware &amp; Device Terms</div></div>
+    <p class="tc-p">For users who purchase POS hardware devices through Dukan Daftar (such as the Android Handheld POS Terminal or Ciontek CS30), the following additional terms apply:</p>
+    <div class="tc-box">
+      <div class="tc-list">
+        <div class="tc-li"><div class="tc-li-dot li-blue">→</div>Hardware purchases are separate transactions from software subscriptions</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">→</div>Hardware warranty is provided by the device manufacturer, not Dukan Daftar</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">→</div>We will install and configure the app on purchased devices as a one-time setup service</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">→</div>The 3-month free software offer applies only to devices purchased directly through us</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>Hardware returns or exchanges must be arranged within 7 days of delivery, subject to device condition</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>We are not responsible for hardware damage caused by misuse, drops, liquid damage, or unauthorized repair</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tc-divider"></div>
+
+  <!-- SECTION 8 -->
+  <div class="tc-section" id="t8">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">8</div><div class="tc-sec-title">Intellectual Property</div></div>
+    <p class="tc-p">The Dukan Daftar name, logo, app design, user interface, code, and all associated materials are the intellectual property of Dukan Daftar. All rights are reserved.</p>
+    <div class="tc-box">
+      <div class="tc-list">
+        <div class="tc-li"><div class="tc-li-dot li-blue">✓</div>You are granted a limited, non-exclusive, non-transferable license to use the app for personal or business use</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">✗</div>You may not copy, modify, distribute, sell, or create derivative works of the app or its components</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">✗</div>You may not use our logo, name, or branding without written permission</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">✗</div>Screenshots of the app may be shared for personal use but not for commercial advertising without permission</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tc-divider"></div>
+
+  <!-- SECTION 9 -->
+  <div class="tc-section" id="t9">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">9</div><div class="tc-sec-title">Limitation of Liability</div></div>
+    <p class="tc-p">To the maximum extent permitted by law, Dukan Daftar shall not be liable for:</p>
+    <div class="tc-box">
+      <div class="tc-list">
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>Any loss of business data, profits, revenue, or business opportunities</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>Data loss resulting from device failure, theft, factory reset, or lack of backup</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>App downtime, bugs, or errors that cause interruption to your business operations</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>Any indirect, incidental, special, or consequential damages arising from use of the app</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>Actions of third-party services, including Google Drive, that affect your backup data</div>
+      </div>
+    </div>
+    <p class="tc-p">Our total liability to you for any claim arising from your use of Dukan Daftar shall not exceed the amount you paid us in the three months preceding the claim.</p>
+    <div class="tc-warn">
+      <div class="tc-warn-icon">⚠️</div>
+      <div class="tc-warn-text"><strong>The app is provided "as-is".</strong> While we work hard to keep it reliable and accurate, we make no guarantees that it will be error-free or uninterrupted at all times. Always keep independent records of critical financial data.</div>
+    </div>
+  </div>
+
+  <div class="tc-divider"></div>
+
+  <!-- SECTION 10 -->
+  <div class="tc-section" id="t10">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">10</div><div class="tc-sec-title">Termination</div></div>
+    <p class="tc-p"><strong>By You:</strong> You may stop using the app and cancel your subscription at any time by contacting us. Uninstalling the app terminates your use immediately. No refunds are issued for unused subscription time.</p>
+    <p class="tc-p"><strong>By Us:</strong> We reserve the right to suspend or terminate your access to Dukan Daftar, with or without notice, if:</p>
+    <div class="tc-box">
+      <div class="tc-list">
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>You violate any provision of these Terms</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>You use the app for illegal or fraudulent purposes</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>Your subscription payment fails repeatedly despite reminders</div>
+        <div class="tc-li"><div class="tc-li-dot li-red">!</div>Continued access poses a risk to other users or the integrity of the app</div>
+      </div>
+    </div>
+    <p class="tc-p">Upon termination, you should export and save any data you wish to keep before your access is removed.</p>
+  </div>
+
+  <div class="tc-divider"></div>
+
+  <!-- SECTION 11 -->
+  <div class="tc-section" id="t11">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">11</div><div class="tc-sec-title">Governing Law</div></div>
+    <p class="tc-p">These Terms and Conditions are governed by and construed in accordance with the laws of the <strong>Islamic Republic of Pakistan</strong>. Any disputes arising from these Terms shall be subject to the jurisdiction of the courts of Pakistan.</p>
+    <p class="tc-p">If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall continue in full force and effect.</p>
+  </div>
+
+  <div class="tc-divider"></div>
+
+  <!-- SECTION 12 -->
+  <div class="tc-section" id="t12">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">12</div><div class="tc-sec-title">Changes to Terms</div></div>
+    <p class="tc-p">We may update these Terms from time to time. When we make material changes, we will:</p>
+    <div class="tc-box">
+      <div class="tc-list">
+        <div class="tc-li"><div class="tc-li-dot li-blue">→</div>Update the "Last Updated" date at the top of this page</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">→</div>Display an in-app notification informing you of the changes</div>
+        <div class="tc-li"><div class="tc-li-dot li-blue">→</div>Post the updated Terms at dukandaftar.pk/terms</div>
+      </div>
+    </div>
+    <p class="tc-p">Continued use of the app after the effective date of any changes constitutes your acceptance of the revised Terms. If you disagree with the updated Terms, you must stop using the app.</p>
+  </div>
+
+  <div class="tc-divider"></div>
+
+  <!-- SECTION 13 -->
+  <div class="tc-section" id="t13">
+    <div class="tc-sec-hdr"><div class="tc-sec-n">13</div><div class="tc-sec-title">Contact Information</div></div>
+    <p class="tc-p">If you have any questions about these Terms, want to report a violation, or need to discuss your subscription, please contact us:</p>
+    <div class="tc-contact">
+      <div class="tc-contact-title">Get in Touch / رابطہ کریں</div>
+      <div class="tc-contact-sub">Questions about Terms? We'll explain everything — in English or Urdu.<br/>شرائط کے بارے میں سوال؟ ہم سمجھائیں گے — انگریزی یا اردو میں۔</div>
+      <div class="tc-contact-links">
+        <a href="mailto:info@dukandaftar.pk" class="tc-btn primary">✉️ info@dukandaftar.pk</a>
+        <a href="https://wa.me/923001234567" class="tc-btn outline" target="_blank">💬 WhatsApp</a>
+        <a href="tel:+923366859938" class="tc-btn outline">📞 +92 336 685 9938</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="tc-footer">
+  <div class="tc-footer-text">© 2026 Dukan Daftar · Terms &amp; Conditions · Last Updated May 14, 2026</div>
+  <div class="tc-footer-links">
+    <a href="index.html" class="tc-footer-link">🏠 Home</a>
+    <a href="privacy_policy.html" class="tc-footer-link">🔒 Privacy Policy</a>
+    <a href="mailto:info@dukandaftar.pk" class="tc-footer-link">✉️ Contact</a>
+  </div>
+  <div class="tc-footer-urdu">دکان دفتر — آپ کا بھروسہ، ہماری ذمہ داری</div>
+</div>
+
+</body>
+</html>

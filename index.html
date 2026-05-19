@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Dukan Daftar — Pakistan ka #1 Smart Shop Management App. POS, Credit Khata, Inventory, Reports, Backup. Download from Play Store."/>
+<meta name="keywords" content="dukan daftar, shop management app, kiryana app, POS Pakistan, khata app, inventory app Pakistan"/>
+<meta property="og:title" content="Dukan Daftar — Smart Shop App Pakistan"/>
+<meta property="og:description" content="POS Sale, Credit Khata, Barcode Scanner, Reports, Backup — sab ek app mein. Pakistan ke dukaandars ke liye."/>
+<meta property="og:type" content="website"/>
+<title>Dukan Daftar — Pakistan's #1 Smart Shop App | دکان دفتر</title>
+<link rel="canonical" href="https://yourusername.github.io/dukan-daftar/"/>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;700;800;900&family=Satoshi:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+:root{
+  --blue:#0A4BBA;--blue2:#082E73;--cyan:#00C8E0;
+  --gold:#F59E0B;--green:#059669;--red:#DC2626;
+  --bg:#F2F6FF;--text:#05101F;--sub:#4E6080;--border:#DDE8FF;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Satoshi',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+/* ── TRANSLATOR BAR ── */
+.translator-bar{
+  background:linear-gradient(135deg,var(--blue2),var(--blue));
+  padding:0;overflow:hidden;position:relative;
+}
+.trans-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:stretch;gap:0;
+  min-height:52px;
+}
+.trans-label{
+  display:flex;align-items:center;gap:8px;
+  padding:0 20px;
+  background:rgba(0,0,0,0.15);
+  font-size:12px;font-weight:700;color:rgba(255,255,255,0.7);
+  white-space:nowrap;letter-spacing:0.5px;
+  border-right:1px solid rgba(255,255,255,0.08);
+  flex-shrink:0;
+}
+.trans-label-icon{font-size:16px;}
+.trans-input-wrap{flex:1;display:flex;align-items:center;padding:8px 16px;gap:0;}
+#transInput{
+  flex:1;background:transparent;border:none;outline:none;
+  font-size:13px;font-weight:500;color:#fff;
+  font-family:'Satoshi',sans-serif;
+  placeholder-color:rgba(255,255,255,0.35);
+}
+#transInput::placeholder{color:rgba(255,255,255,0.35);}
+.trans-clear{
+  background:none;border:none;cursor:pointer;
+  color:rgba(255,255,255,0.4);font-size:16px;padding:4px 8px;
+  transition:color .2s;flex-shrink:0;
+}
+.trans-clear:hover{color:rgba(255,255,255,0.8);}
+.trans-btn{
+  display:flex;align-items:center;gap:7px;
+  background:rgba(0,200,224,0.2);border:none;
+  border-left:1px solid rgba(255,255,255,0.08);
+  padding:0 20px;cursor:pointer;
+  font-size:13px;font-weight:700;color:var(--cyan);
+  font-family:'Satoshi',sans-serif;white-space:nowrap;
+  transition:background .2s;
+}
+.trans-btn:hover{background:rgba(0,200,224,0.32);}
+.trans-btn.loading{color:rgba(0,200,224,0.5);}
+.trans-result-bar{
+  background:rgba(255,255,255,0.06);
+  border-top:1px solid rgba(255,255,255,0.06);
+  display:none;
+}
+.trans-result-inner{
+  max-width:1200px;margin:0 auto;
+  padding:10px 20px;
+  display:flex;align-items:flex-start;gap:12px;
+}
+.trans-result-label{font-size:10px;font-weight:800;color:var(--cyan);letter-spacing:1px;text-transform:uppercase;flex-shrink:0;margin-top:2px;}
+.trans-result-text{font-size:13px;color:#fff;line-height:1.6;flex:1;}
+.trans-copy-btn{
+  background:none;border:1px solid rgba(255,255,255,0.15);
+  border-radius:8px;padding:4px 10px;
+  font-size:11px;font-weight:700;color:rgba(255,255,255,0.5);
+  cursor:pointer;flex-shrink:0;transition:all .2s;
+  font-family:'Satoshi',sans-serif;
+}
+.trans-copy-btn:hover{background:rgba(255,255,255,0.1);color:#fff;}
+
+/* ── NAVBAR ── */
+nav{
+  background:linear-gradient(135deg,#071222,#0A2560);
+  padding:0 5%;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+  box-shadow:0 4px 24px rgba(0,0,0,0.3);
+}
+.nav-inner{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-svg-wrap{width:36px;height:36px;border-radius:11px;overflow:hidden;flex-shrink:0;}
+.nav-name{font-family:'Cabinet Grotesk',sans-serif;font-size:18px;font-weight:900;color:#fff;letter-spacing:-0.4px;}
+.nav-name span{color:var(--cyan);}
+.nav-links{display:flex;align-items:center;gap:4px;}
+.nav-a{padding:7px 13px;border-radius:9px;font-size:13px;font-weight:600;color:rgba(255,255,255,0.55);text-decoration:none;transition:all .2s;white-space:nowrap;}
+.nav-a:hover{color:#fff;background:rgba(255,255,255,0.07);}
+.nav-cta{background:linear-gradient(135deg,var(--cyan),#009AB0);color:#fff;border-radius:10px;padding:8px 18px;font-size:13px;font-weight:800;text-decoration:none;transition:all .25s;box-shadow:0 3px 14px rgba(0,200,224,0.3);}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,200,224,0.45);}
+.nav-mobile-btn{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;}
+.nav-mobile-btn span{width:22px;height:2px;background:#fff;border-radius:2px;display:block;}
+
+/* ── HERO ── */
+.hero{
+  min-height:92vh;
+  background:radial-gradient(ellipse at 15% 50%,rgba(10,75,186,0.3) 0%,transparent 55%),
+             radial-gradient(ellipse at 85% 20%,rgba(0,200,224,0.12) 0%,transparent 45%),
+             linear-gradient(160deg,#05101F 0%,#071828 50%,#0A1E38 100%);
+  display:flex;align-items:center;position:relative;overflow:hidden;
+  padding:100px 5% 80px;
+}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:56px 56px;animation:gridMove 22s linear infinite;pointer-events:none;}
+@keyframes gridMove{from{background-position:0 0;}to{background-position:56px 56px;}}
+.hero-orb1{position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(10,75,186,0.14);filter:blur(80px);top:-120px;right:-80px;pointer-events:none;animation:orb 9s ease-in-out infinite;}
+.hero-orb2{position:absolute;width:350px;height:350px;border-radius:50%;background:rgba(0,200,224,0.08);filter:blur(80px);bottom:-80px;left:5%;pointer-events:none;animation:orb 7s ease-in-out 2s infinite;}
+@keyframes orb{0%,100%{transform:translate(0,0);}50%{transform:translate(15px,-15px);}}
+
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1;width:100%;}
+
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,200,224,0.1);border:1px solid rgba(0,200,224,0.22);border-radius:100px;padding:7px 18px;font-size:12px;font-weight:700;color:var(--cyan);margin-bottom:22px;letter-spacing:1.5px;text-transform:uppercase;}
+.badge-blink{width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:blink 1.5s ease infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+
+.hero-h1{font-family:'Cabinet Grotesk',sans-serif;font-size:clamp(38px,5.5vw,68px);font-weight:900;color:#fff;line-height:1.0;letter-spacing:-2.5px;margin-bottom:8px;}
+.hero-h1 .c1{background:linear-gradient(135deg,var(--cyan),#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-h1 .c2{background:linear-gradient(135deg,var(--gold),#FCD34D);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-urdu{font-family:'Noto Nastaliq Urdu',serif;font-size:20px;color:rgba(255,255,255,0.4);direction:rtl;margin-bottom:18px;}
+.hero-sub{font-size:17px;color:rgba(255,255,255,0.56);line-height:1.7;max-width:500px;margin-bottom:36px;}
+
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px;}
+.btn-cyan{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--cyan),#009AB0);color:#fff;border-radius:14px;padding:15px 30px;font-size:15px;font-weight:800;text-decoration:none;transition:all .3s;box-shadow:0 6px 26px rgba(0,200,224,0.35);}
+.btn-cyan:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,200,224,0.5);}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.06);border:1.5px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);border-radius:14px;padding:14px 26px;font-size:15px;font-weight:700;text-decoration:none;transition:all .3s;}
+.btn-ghost:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px);}
+
+.hero-trust{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:36px;}
+.trust-chip{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.45);}
+.trust-sep{width:1px;height:14px;background:rgba(255,255,255,0.1);}
+
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(255,255,255,0.07);padding-top:32px;}
+.hstat{text-align:center;position:relative;}
+.hstat+.hstat::before{content:'';position:absolute;left:0;top:10%;bottom:10%;width:1px;background:rgba(255,255,255,0.07);}
+.hstat-n{font-family:'Cabinet Grotesk',sans-serif;font-size:30px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1;}
+.hstat-l{font-size:11px;color:rgba(255,255,255,0.38);font-weight:500;margin-top:4px;}
+
+/* Hero phone */
+.hero-phone-wrap{position:relative;display:flex;justify-content:center;animation:phoneFloat 5s ease-in-out infinite;}
+@keyframes phoneFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+.hero-phone{
+  width:230px;background:linear-gradient(180deg,#0C0C18,#080810);
+  border-radius:44px;padding:8px;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.07),0 50px 100px rgba(0,0,0,0.65),0 0 80px rgba(10,75,186,0.22),inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.hp-notch{width:82px;height:20px;background:#080810;border-radius:0 0 12px 12px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;gap:4px;}
+.hp-cam{width:7px;height:7px;border-radius:50%;background:#141420;}
+.hp-pill{width:28px;height:4px;border-radius:4px;background:#141420;}
+.hp-screen{background:var(--bg);border-radius:35px;overflow:hidden;height:440px;display:flex;flex-direction:column;}
+.hp-hdr{background:linear-gradient(155deg,#071228,#0A3A8A);padding:12px 12px 14px;flex-shrink:0;}
+.hp-greet{font-size:8px;color:rgba(255,255,255,0.45);margin-bottom:2px;}
+.hp-name{font-family:'Cabinet Grotesk',sans-serif;font-size:14px;color:#fff;font-weight:900;margin-bottom:10px;}
+.hp-kgrid{display:grid;grid-template-columns:1fr 1fr;gap:5px;}
+.hp-k{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.13);border-radius:10px;padding:8px;}
+.hp-kl{font-size:7px;color:rgba(255,255,255,0.48);margin-bottom:2px;}
+.hp-kv{font-family:'Cabinet Grotesk',sans-serif;font-size:13px;color:#fff;font-weight:900;}
+.hp-kb{display:inline-block;border-radius:100px;padding:1px 6px;font-size:7px;font-weight:800;margin-top:2px;}
+.hp-body{flex:1;padding:8px 10px;display:flex;flex-direction:column;gap:7px;overflow:hidden;}
+.hp-qa{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;}
+.hp-qab{background:#fff;border-radius:9px;padding:6px 3px;text-align:center;border:1px solid #DDE8FF;}
+.hp-qic{font-size:13px;}
+.hp-ql{font-size:6.5px;font-weight:700;color:var(--text);margin-top:2px;}
+.hp-txns{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #DDE8FF;}
+.hp-txrow{display:flex;align-items:center;gap:7px;padding:7px 9px;border-bottom:1px solid #DDE8FF;}
+.hp-txrow:last-child{border-bottom:none;}
+.hp-av{width:24px;height:24px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Cabinet Grotesk',sans-serif;font-size:10px;font-weight:900;color:#fff;flex-shrink:0;}
+.hp-tn{font-size:8.5px;font-weight:700;color:var(--text);}
+.hp-ts{font-size:7px;color:var(--sub2,#8FA0C0);}
+.hp-ta{font-family:'Cabinet Grotesk',sans-serif;font-size:9.5px;font-weight:900;margin-left:auto;}
+.hp-bnav{background:#fff;border-top:1px solid #DDE8FF;height:48px;display:flex;align-items:center;justify-content:space-around;padding:0 6px 4px;flex-shrink:0;}
+.hp-bn{display:flex;flex-direction:column;align-items:center;gap:1.5px;flex:1;font-size:7px;font-weight:700;color:#8FA0C0;}
+.hp-bn.on{color:var(--blue);}
+.hp-bnic{font-size:14px;}
+.hp-fab-w{flex:1;display:flex;justify-content:center;}
+.hp-fab{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#1565C0);display:flex;align-items:center;justify-content:center;font-size:17px;color:#fff;margin-top:-13px;border:2px solid var(--bg);box-shadow:0 4px 14px rgba(10,75,186,0.45);}
+
+/* Floating cards */
+.fc{position:absolute;background:rgba(7,20,40,0.8);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:10px 14px;animation:fcFloat 4s ease-in-out infinite;}
+.fc1{top:5%;left:-12%;animation-delay:.5s;}
+.fc2{bottom:12%;right:-10%;animation-delay:1s;}
+@keyframes fcFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+.fc-lbl{font-size:9px;color:rgba(255,255,255,0.45);margin-bottom:3px;}
+.fc-val{font-family:'Cabinet Grotesk',sans-serif;font-size:15px;font-weight:900;color:#fff;}
+.fc-tag{display:inline-block;border-radius:100px;padding:2px 8px;font-size:8px;font-weight:800;margin-top:4px;}
+
+/* ── PACKAGES QUICK ── */
+.pkgs{padding:80px 5%;background:#fff;}
+.pkgs-inner{max-width:1200px;margin:0 auto;}
+.pkgs-hdr{text-align:center;margin-bottom:48px;}
+.pkgs-ey{font-size:11px;font-weight:800;color:var(--blue);letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;}
+.pkgs-h2{font-family:'Cabinet Grotesk',sans-serif;font-size:clamp(26px,4vw,44px);font-weight:900;color:var(--text);letter-spacing:-1.2px;margin-bottom:10px;}
+.pkgs-h2 span{color:var(--blue);}
+.pkgs-sub{font-size:15px;color:var(--sub);}
+.pkgs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.pkg{border-radius:24px;padding:28px;position:relative;transition:transform .3s;}
+.pkg:hover{transform:translateY(-6px);}
+.pkg.s{background:var(--bg);border:1.5px solid var(--border);}
+.pkg.p{background:linear-gradient(160deg,var(--blue2),var(--blue));border:1.5px solid rgba(255,255,255,0.12);box-shadow:0 20px 50px rgba(10,75,186,0.3);transform:scale(1.03);}
+.pkg.p:hover{transform:scale(1.03) translateY(-6px);}
+.pkg.e{background:linear-gradient(160deg,#0B1221,#1E2D4A);border:1.5px solid rgba(245,158,11,0.28);}
+.pkg-ey{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;}
+.pkg-name{font-family:'Cabinet Grotesk',sans-serif;font-size:20px;font-weight:900;margin-bottom:6px;}
+.pkg-s .pkg-name,.pkg-e .pkg-name{color:var(--text);}
+.pkg-p .pkg-name{color:#fff;}
+.pkg.p .pkg-name,.pkg.e .pkg-name{color:#fff;}
+.pkg.s .pkg-name{color:var(--text);}
+.pkg-price{font-family:'Cabinet Grotesk',sans-serif;font-size:46px;font-weight:900;letter-spacing:-2px;line-height:1;margin-bottom:4px;}
+.pkg.s .pkg-price{color:var(--text);}
+.pkg.p .pkg-price{color:var(--cyan);}
+.pkg.e .pkg-price{color:var(--gold);}
+.pkg-per{font-size:13px;color:rgba(255,255,255,0.35);margin-bottom:18px;}
+.pkg.s .pkg-per{color:var(--sub);}
+.pkg-fs{display:flex;flex-direction:column;gap:8px;margin-bottom:22px;}
+.pkg-f{font-size:13px;display:flex;align-items:center;gap:8px;}
+.pkg.s .pkg-f{color:var(--sub);}
+.pkg.p .pkg-f,.pkg.e .pkg-f{color:rgba(255,255,255,0.75);}
+.pkg-f-icon{font-size:12px;flex-shrink:0;}
+.pkg-cta{display:block;text-align:center;border-radius:12px;padding:13px;font-size:14px;font-weight:800;text-decoration:none;transition:all .25s;}
+.pkg-cta-s{background:linear-gradient(135deg,var(--blue),#1565C0);color:#fff;box-shadow:0 4px 14px rgba(10,75,186,0.3);}
+.pkg-cta-p{background:linear-gradient(135deg,var(--cyan),#009AB0);color:#fff;box-shadow:0 4px 18px rgba(0,200,224,0.4);}
+.pkg-cta-e{background:linear-gradient(135deg,var(--gold),#E08B00);color:#fff;box-shadow:0 4px 14px rgba(245,158,11,0.3);}
+.pkg-cta:hover{transform:translateY(-2px);}
+.popular-lbl{position:absolute;top:18px;right:18px;background:var(--cyan);color:#fff;border-radius:100px;padding:4px 12px;font-size:10px;font-weight:800;}
+.gold-lbl{position:absolute;top:18px;right:18px;background:var(--gold);color:#05101F;border-radius:100px;padding:4px 12px;font-size:10px;font-weight:800;}
+
+/* ── QUICK LINKS ── */
+.quick-links{padding:60px 5%;background:linear-gradient(160deg,#05101F,#071828);}
+.ql-inner{max-width:1200px;margin:0 auto;}
+.ql-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.ql-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:18px;padding:22px 20px;text-decoration:none;transition:all .3s;display:flex;flex-direction:column;gap:10px;}
+.ql-card:hover{background:rgba(255,255,255,0.08);border-color:rgba(0,200,224,0.25);transform:translateY(-4px);}
+.ql-icon{font-size:28px;}
+.ql-title{font-family:'Cabinet Grotesk',sans-serif;font-size:16px;font-weight:800;color:#fff;letter-spacing:-0.2px;}
+.ql-desc{font-size:12.5px;color:rgba(255,255,255,0.4);line-height:1.55;}
+.ql-arrow{font-size:12px;color:rgba(0,200,224,0.6);font-weight:700;margin-top:auto;}
+
+/* ── CTA BANNER ── */
+.cta-banner{
+  background:linear-gradient(135deg,var(--blue2),var(--blue),#1565C0);
+  padding:72px 5%;text-align:center;position:relative;overflow:hidden;
+}
+.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(0,200,224,0.12),transparent 55%);}
+.cta-h2{font-family:'Cabinet Grotesk',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:900;color:#fff;letter-spacing:-1.5px;margin-bottom:14px;position:relative;}
+.cta-sub{font-size:16px;color:rgba(255,255,255,0.58);margin-bottom:32px;position:relative;}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;}
+
+/* ── FOOTER ── */
+footer{background:#030D1A;padding:44px 5% 24px;border-top:1px solid rgba(255,255,255,0.05);}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:36px;}
+.footer-brand-name{font-family:'Cabinet Grotesk',sans-serif;font-size:18px;font-weight:900;color:#fff;margin-bottom:10px;}
+.footer-brand-name span{color:var(--cyan);}
+.footer-desc{font-size:13px;color:rgba(255,255,255,0.33);line-height:1.7;margin-bottom:14px;max-width:270px;}
+.footer-urdu{font-family:'Noto Nastaliq Urdu',serif;font-size:12px;color:rgba(255,255,255,0.22);direction:rtl;}
+.footer-col-h{font-family:'Cabinet Grotesk',sans-serif;font-size:12px;font-weight:800;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;}
+.footer-links{display:flex;flex-direction:column;gap:9px;}
+.footer-a{font-size:13px;color:rgba(255,255,255,0.36);text-decoration:none;transition:color .2s;}
+.footer-a:hover{color:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.22);}
+.footer-legal{display:flex;gap:16px;}
+.footer-legal-a{font-size:12px;color:rgba(255,255,255,0.28);text-decoration:none;transition:color .2s;}
+.footer-legal-a:hover{color:rgba(255,255,255,0.65);}
+
+/* ── MOBILE MENU ── */
+.mobile-overlay{display:none;position:fixed;inset:0;background:rgba(5,16,31,0.97);backdrop-filter:blur(20px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:6px;}
+.mobile-overlay.open{display:flex;}
+.mob-a{font-family:'Cabinet Grotesk',sans-serif;font-size:26px;font-weight:900;color:rgba(255,255,255,0.55);text-decoration:none;padding:10px 24px;border-radius:14px;transition:all .2s;width:260px;text-align:center;}
+.mob-a:hover{color:#fff;background:rgba(255,255,255,0.06);}
+.mob-x{position:absolute;top:20px;right:20px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;text-align:center;}
+  .hero-phone-wrap{display:none;}
+  .pkgs-grid{grid-template-columns:1fr;}
+  .pkg.p{transform:none;}
+  .ql-grid{grid-template-columns:1fr 1fr;}
+  .footer-inner{grid-template-columns:1fr 1fr;}
+  nav .nav-links,.nav-cta{display:none;}
+  .nav-mobile-btn{display:flex;}
+}
+@media(max-width:600px){
+  .ql-grid{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr;}
+  .trans-inner{flex-wrap:nowrap;}
+}
+</style>
+</head>
+<body>
+
+<!-- MOBILE OVERLAY -->
+<div class="mobile-overlay" id="mobileMenu">
+  <button class="mob-x" onclick="closeMob()">✕</button>
+  <a href="#home" class="mob-a" onclick="closeMob()">🏠 Home</a>
+  <a href="#packages" class="mob-a" onclick="closeMob()">💰 Pricing</a>
+  <a href="privacy_policy.html" class="mob-a" onclick="closeMob()">🔒 Privacy</a>
+  <a href="terms.html" class="mob-a" onclick="closeMob()">📜 Terms</a>
+  <a href="https://wa.me/923366859938" class="mob-a" target="_blank" onclick="closeMob()">💬 WhatsApp</a>
+  <a href="#packages" class="btn-cyan" style="margin-top:16px;font-size:15px;" onclick="closeMob()">Abhi Shuru Karein →</a>
+</div>
+
+<!-- ═══ TRANSLATOR BAR ═══ -->
+<div class="translator-bar">
+  <div class="trans-inner">
+    <div class="trans-label">
+      <span class="trans-label-icon">🌐</span>
+      Translate
+    </div>
+    <div class="trans-input-wrap">
+      <input
+        type="text"
+        id="transInput"
+        placeholder="Type Roman Urdu or English — e.g. 'mujhe app chahiye' or 'mera hisaab…'"
+        autocomplete="off"
+        onkeydown="if(event.key==='Enter')doTranslate()"
+      />
+      <button class="trans-clear" onclick="clearTrans()" title="Clear">✕</button>
+    </div>
+    <button class="trans-btn" id="transBtn" onclick="doTranslate()">
+      ✨ Translate
+    </button>
+  </div>
+  <div class="trans-result-bar" id="transResultBar">
+    <div class="trans-result-inner">
+      <div class="trans-result-label">Result</div>
+      <div class="trans-result-text" id="transResultText"></div>
+      <button class="trans-copy-btn" id="transCopyBtn" onclick="copyTrans()">Copy</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <div class="logo-svg-wrap">
+        <svg width="36" height="36" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lb" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0D3B6E"/><stop offset="100%" stop-color="#1565A8"/></linearGradient>
+            <linearGradient id="lr" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#02C7DD"/><stop offset="100%" stop-color="#0199B0"/></linearGradient>
+            <linearGradient id="lw" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#EAF4FD"/></linearGradient>
+          </defs>
+          <rect x="12" y="12" width="1000" height="1000" rx="200" fill="url(#lb)"/>
+          <polygon points="200,340 512,120 824,340" fill="url(#lr)"/>
+          <rect x="196" y="336" width="632" height="480" rx="10" fill="url(#lw)"/>
+          <polygon points="182,388 842,388 820,458 204,458" fill="url(#lr)"/>
+          <rect x="280" y="484" width="464" height="84" rx="12" fill="#0F4C75"/>
+          <text x="512" y="541" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="800" fill="#02C7DD" letter-spacing="4">DD</text>
+          <rect x="416" y="636" width="192" height="188" rx="10" fill="#0F4C75"/>
+          <rect x="424" y="644" width="176" height="176" rx="8" fill="#8B5E3C"/>
+          <circle cx="504" cy="748" r="10" fill="#FEDF33"/>
+          <circle cx="225" cy="368" r="52" fill="#FEDF33"/>
+          <text x="225" y="383" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="900" fill="#7A4F00">₨</text>
+        </svg>
+      </div>
+      <div class="nav-name">Dukan <span>Daftar</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#home" class="nav-a">Home</a>
+      <a href="#packages" class="nav-a">Pricing / قیمت</a>
+      <a href="privacy_policy.html" class="nav-a">Privacy</a>
+      <a href="terms.html" class="nav-a">Terms</a>
+    </div>
+    <a href="https://wa.me/923366859938?text=Assalam%20o%20Alaikum!%20Dukan%20Daftar%20ke%20bare%20mein%20poochna%20chahta%20hoon." class="nav-cta" target="_blank">💬 WhatsApp</a>
+    <button class="nav-mobile-btn" onclick="document.getElementById('mobileMenu').classList.add('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="home">
+  <div class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-orb1"></div>
+    <div class="hero-orb2"></div>
+    <div class="hero-inner">
+      <!-- LEFT -->
+      <div>
+        <div class="hero-badge"><span class="badge-blink"></span>🇵🇰 Pakistan's #1 Shop App</div>
+        <h1 class="hero-h1">
+          Your Shop,<br/>
+          <span class="c1">Smarter</span><br/>
+          <span class="c2">Stronger</span>
+        </h1>
+        <div class="hero-urdu">دکان دفتر — آپ کی دکان، آپ کا حساب</div>
+        <p class="hero-sub">
+          POS Sale · Credit Khata · Barcode Scanner · Supplier Management · Smart Reports · Google Drive Backup — everything your shop needs, in one app.
+        </p>
+        <div class="hero-btns">
+          <a href="https://play.google.com/store" class="btn-cyan" target="_blank">▶ Download Free — Play Store</a>
+          <a href="https://wa.me/923366859938" class="btn-ghost" target="_blank">💬 Get a Demo</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-chip">✅ Free Download</div>
+          <div class="trust-sep"></div>
+          <div class="trust-chip">📶 Works Offline</div>
+          <div class="trust-sep"></div>
+          <div class="trust-chip">🔒 Data is Yours</div>
+          <div class="trust-sep"></div>
+          <div class="trust-chip">📱 Android + iOS</div>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat">
+            <div class="hstat-n" style="background:linear-gradient(135deg,var(--cyan),#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">500+</div>
+            <div class="hstat-l">Happy Shops</div>
+          </div>
+          <div class="hstat">
+            <div class="hstat-n" style="background:linear-gradient(135deg,var(--gold),#FCD34D);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">50K+</div>
+            <div class="hstat-l">Daily Sales</div>
+          </div>
+          <div class="hstat">
+            <div class="hstat-n" style="background:linear-gradient(135deg,#6EE7B7,var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">99.9%</div>
+            <div class="hstat-l">Uptime</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT — Phone -->
+      <div class="hero-phone-wrap">
+        <div class="fc fc1">
+          <div class="fc-lbl">💰 Today's Sales</div>
+          <div class="fc-val">₨ 18,450</div>
+          <div class="fc-tag" style="background:rgba(5,150,105,0.25);color:#6EE7B7;">↑ 12% today</div>
+        </div>
+        <div class="fc fc2">
+          <div class="fc-lbl">🔔 New Sale</div>
+          <div class="fc-val" style="font-size:13px;">Ali Traders</div>
+          <div class="fc-tag" style="background:rgba(0,200,224,0.15);color:var(--cyan);">+₨ 2,400</div>
+        </div>
+        <div class="hero-phone">
+          <div class="hp-notch"><div class="hp-cam"></div><div class="hp-pill"></div></div>
+          <div class="hp-screen">
+            <div style="display:flex;justify-content:space-between;padding:6px 12px 4px;font-size:9px;font-weight:700;color:var(--text);">
+              <span>9:41</span><span>🔋</span>
+            </div>
+            <div class="hp-hdr">
+              <div class="hp-greet">السلام علیکم 👋</div>
+              <div class="hp-name">Ahmad's Dukan</div>
+              <div class="hp-kgrid">
+                <div class="hp-k">
+                  <div class="hp-kl">Aaj ki Bikri</div>
+                  <div class="hp-kv">₨18,450</div>
+                  <div class="hp-kb" style="background:rgba(5,150,105,0.28);color:#6EE7B7;">↑12.4%</div>
+                </div>
+                <div class="hp-k">
+                  <div class="hp-kl">Outstanding</div>
+                  <div class="hp-kv">₨42,800</div>
+                  <div class="hp-kb" style="background:rgba(245,158,11,0.22);color:#FCD34D;">8 cust</div>
+                </div>
+              </div>
+            </div>
+            <div class="hp-body">
+              <div style="font-family:'Cabinet Grotesk',sans-serif;font-size:10px;font-weight:800;color:var(--text);">⚡ Quick Actions</div>
+              <div class="hp-qa">
+                <div class="hp-qab"><div class="hp-qic">🛒</div><div class="hp-ql">Sale</div></div>
+                <div class="hp-qab"><div class="hp-qic">📓</div><div class="hp-ql">Khata</div></div>
+                <div class="hp-qab"><div class="hp-qic">📦</div><div class="hp-ql">Stock</div></div>
+                <div class="hp-qab"><div class="hp-qic">📊</div><div class="hp-ql">Report</div></div>
+              </div>
+              <div style="font-family:'Cabinet Grotesk',sans-serif;font-size:10px;font-weight:800;color:var(--text);">🕐 Recent</div>
+              <div class="hp-txns">
+                <div class="hp-txrow">
+                  <div class="hp-av" style="background:#059669;">A</div>
+                  <div><div class="hp-tn">Ali Traders</div><div class="hp-ts">POS Sale</div></div>
+                  <div class="hp-ta" style="color:#059669;">+₨2,400</div>
+                </div>
+                <div class="hp-txrow">
+                  <div class="hp-av" style="background:#F59E0B;">K</div>
+                  <div><div class="hp-tn">Khan Supplier</div><div class="hp-ts">Purchase</div></div>
+                  <div class="hp-ta" style="color:#DC2626;">-₨8,200</div>
+                </div>
+                <div class="hp-txrow">
+                  <div class="hp-av" style="background:#0A4BBA;">R</div>
+                  <div><div class="hp-tn">Rehman Sahib</div><div class="hp-ts">Credit ✓</div></div>
+                  <div class="hp-ta" style="color:#059669;">+₨1,200</div>
+                </div>
+              </div>
+            </div>
+            <div class="hp-bnav">
+              <div class="hp-bn on"><div class="hp-bnic">🏠</div>Home</div>
+              <div class="hp-bn"><div class="hp-bnic">👥</div>Khata</div>
+              <div class="hp-fab-w"><div class="hp-fab">🛒</div></div>
+              <div class="hp-bn"><div class="hp-bnic">📈</div>Report</div>
+              <div class="hp-bn"><div class="hp-bnic">⚙️</div>More</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PACKAGES ═══ -->
+<section id="packages" class="pkgs">
+  <div class="pkgs-inner">
+    <div class="pkgs-hdr">
+      <div class="pkgs-ey">Pricing Plans</div>
+      <h2 class="pkgs-h2">Simple, Honest <span>Pricing</span></h2>
+      <p class="pkgs-sub">No hidden fees. Cancel anytime. Buy a device and get 3 months FREE.</p>
+    </div>
+    <div class="pkgs-grid">
+
+      <!-- Starter -->
+      <div class="pkg s">
+        <div class="pkg-ey" style="color:var(--blue);">🟢 Starter</div>
+        <div class="pkg-name">Basic Plan</div>
+        <div class="pkg-price">₨499</div>
+        <div class="pkg-per" style="color:var(--sub);">/month</div>
+        <div class="pkg-fs">
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> POS Quick Sale</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Stock Management</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Daily Sales Record</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Local Backup</div>
+          <div class="pkg-f" style="opacity:.4;"><span class="pkg-f-icon">✗</span> Credit Khata</div>
+          <div class="pkg-f" style="opacity:.4;"><span class="pkg-f-icon">✗</span> Barcode Scanner</div>
+        </div>
+        <a href="https://wa.me/923366859938?text=Basic%20Plan%20chahiye" class="pkg-cta pkg-cta-s" target="_blank">Get Started →</a>
+      </div>
+
+      <!-- Pro -->
+      <div class="pkg p">
+        <div class="popular-lbl">⭐ Most Popular</div>
+        <div class="pkg-ey" style="color:var(--cyan);">🔵 Professional</div>
+        <div class="pkg-name">Business Plan</div>
+        <div class="pkg-price" style="color:var(--cyan);">₨999</div>
+        <div class="pkg-per">/month</div>
+        <div class="pkg-fs">
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Everything in Starter</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Credit Book — Khata</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Supplier Management</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Barcode Scanner</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Purchase Tracking</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Expense Tracking</div>
+        </div>
+        <a href="https://wa.me/923366859938?text=Business%20Plan%20chahiye" class="pkg-cta pkg-cta-p" target="_blank">Get Business →</a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="pkg e">
+        <div class="gold-lbl">🏆 Full Setup</div>
+        <div class="pkg-ey" style="color:var(--gold);">🏆 Enterprise</div>
+        <div class="pkg-name">Premium Plan</div>
+        <div class="pkg-price" style="color:var(--gold);">₨1,999</div>
+        <div class="pkg-per">/month</div>
+        <div class="pkg-fs">
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Everything in Business</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Receipt Printer</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Advanced Reports</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> SIM SMS Alerts</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Android + iOS Install</div>
+          <div class="pkg-f"><span class="pkg-f-icon">✓</span> Google Drive Backup</div>
+        </div>
+        <a href="https://wa.me/923366859938?text=Enterprise%20Plan%20chahiye" class="pkg-cta pkg-cta-e" target="_blank">Get Enterprise →</a>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:28px;padding:20px;background:var(--bg);border-radius:14px;border:1px solid var(--border);">
+      <strong style="font-size:14px;color:var(--text);">🎁 Buy a POS Device → Get 3 months software absolutely FREE</strong>
+      <br/><span style="font-size:13px;color:var(--sub);">Android Handheld POS or Ciontek CS30 — both supported. WhatsApp us to order.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUICK LINKS ═══ -->
+<div class="quick-links">
+  <div class="ql-inner">
+    <div class="ql-grid">
+      <a href="https://play.google.com/store" class="ql-card" target="_blank">
+        <div class="ql-icon">▶</div>
+        <div class="ql-title">Download App</div>
+        <div class="ql-desc">Free on Google Play Store. Works on any Android phone.</div>
+        <div class="ql-arrow">Google Play →</div>
+      </a>
+      <a href="https://wa.me/923366859938" class="ql-card" target="_blank">
+        <div class="ql-icon">💬</div>
+        <div class="ql-title">WhatsApp Us</div>
+        <div class="ql-desc">Questions, demo, or order a device — we reply fast.</div>
+        <div class="ql-arrow">Chat Now →</div>
+      </a>
+      <a href="privacy_policy.html" class="ql-card">
+        <div class="ql-icon">🔒</div>
+        <div class="ql-title">Privacy Policy</div>
+        <div class="ql-desc">How we protect your data. Required for Play Store.</div>
+        <div class="ql-arrow">Read Policy →</div>
+      </a>
+      <a href="terms.html" class="ql-card">
+        <div class="ql-icon">📜</div>
+        <div class="ql-title">Terms &amp; Conditions</div>
+        <div class="ql-desc">Your rights, our responsibilities. Plain English.</div>
+        <div class="ql-arrow">Read Terms →</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CTA ═══ -->
+<div class="cta-banner">
+  <h2 class="cta-h2">Ready to Smarten Up Your Shop?<br/><span style="font-size:0.72em;opacity:0.6;">کیا آپ اپنی دکان کو سمارٹ بنانے کے لیے تیار ہیں؟</span></h2>
+  <p class="cta-sub">Download free · No setup fee · First month free with device purchase</p>
+  <div class="cta-btns">
+    <a href="https://play.google.com/store" class="btn-cyan" target="_blank">▶ Download Free Now</a>
+    <a href="https://wa.me/923366859938" class="btn-ghost" target="_blank">💬 WhatsApp — +92 336 685 9938</a>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Dukan <span>Daftar</span></div>
+      <div class="footer-urdu">دکان دفتر — پاکستان کا اپنا ایپ</div>
+      <div class="footer-desc" style="margin-top:8px;">Pakistan's smart shop management app. POS, Khata, Inventory, Reports, Backup — all in one.</div>
+    </div>
+    <div>
+      <div class="footer-col-h">App</div>
+      <div class="footer-links">
+        <a href="https://play.google.com/store" class="footer-a" target="_blank">▶ Play Store</a>
+        <a href="#packages" class="footer-a">💰 Pricing</a>
+        <a href="https://wa.me/923366859938" class="footer-a" target="_blank">💬 WhatsApp Demo</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-h">Legal</div>
+      <div class="footer-links">
+        <a href="privacy_policy.html" class="footer-a">🔒 Privacy Policy</a>
+        <a href="terms.html" class="footer-a">📜 Terms &amp; Conditions</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-h">Contact</div>
+      <div class="footer-links">
+        <a href="tel:+923366859938" class="footer-a">📞 +92 336 685 9938</a>
+        <a href="mailto:info@dukandaftar.com" class="footer-a">✉️ info@dukandaftar.com</a>
+        <a href="https://wa.me/923366859938" class="footer-a" target="_blank">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Dukan Daftar · Made by Shabondan Dev</div>
+    <div class="footer-legal">
+      <a href="privacy_policy.html" class="footer-legal-a">Privacy Policy</a>
+      <a href="terms.html" class="footer-legal-a">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── MOBILE MENU ── */
+function closeMob(){document.getElementById('mobileMenu').classList.remove('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMob();});
+
+/* ── TRANSLATOR ── */
+const TRANS_DICT = {
+  // Common Roman Urdu → English business phrases
+  'mujhe app chahiye':'I need the app',
+  'dukan daftar kya hai':'What is Dukan Daftar?',
+  'price kya hai':'What is the price?',
+  'mera hisaab':'My account / My records',
+  'udhaar':'Credit / Debt on account',
+  'khata':'Ledger / Account book',
+  'bikri':'Sale / Sales',
+  'khareedna':'To purchase / To buy',
+  'maal':'Goods / Stock / Products',
+  'stock khatam':'Stock finished / Out of stock',
+  'report chahiye':'I need a report',
+  'backup lena':'To take a backup',
+  'supplier':'Supplier / Vendor',
+  'purchase':'Purchase / Buying from supplier',
+  'barcode':'Barcode',
+  'printer':'Printer',
+  'install karo':'Install it / Please install',
+  'abhi shuru':'Start now / Begin immediately',
+  'free hai':'It is free',
+  'paisa':'Money / Price',
+  'dena':'To give / Owed by customer',
+  'lena':'To receive / What is owed to you',
+  'number':'Phone number / Contact',
+  'whatsapp karo':'Contact on WhatsApp',
+  'download karo':'Download it',
+  'android':'Android',
+  'playstore':'Play Store',
+  'mobile app':'Mobile application',
+  'kitna paisa':'How much money / What is the cost?',
+  'hafte mein':'In a week / Per week',
+  'mahine mein':'In a month / Monthly',
+  'aaj ki sale':'Today\'s sales',
+  'pura hisaab':'Complete accounts / Full record',
+  'bech':'Sell',
+  'kharcha':'Expense / Expenditure',
+  'faida':'Profit',
+  'nuqsan':'Loss',
+  'grahak':'Customer',
+  'customer':'Customer / Client',
+  'naqd':'Cash / Cash payment',
+  'credit':'Credit / On account',
+  'receipt':'Receipt / Bill',
+  'bill':'Bill / Receipt / Invoice',
+  'mujhe madad chahiye':'I need help',
+  'samajh nahi aaya':'I did not understand',
+  'dobara batao':'Please explain again',
+};
+
+async function doTranslate() {
+  const input = document.getElementById('transInput').value.trim();
+  if (!input) return;
+
+  const btn = document.getElementById('transBtn');
+  const resultBar = document.getElementById('transResultBar');
+  const resultText = document.getElementById('transResultText');
+
+  btn.textContent = '⏳ Translating...';
+  btn.classList.add('loading');
+
+  // Check local dictionary first
+  const lower = input.toLowerCase().trim();
+  let found = null;
+  for (const [key, val] of Object.entries(TRANS_DICT)) {
+    if (lower.includes(key)) { found = val; break; }
+    if (key.includes(lower)) { found = val; break; }
+  }
+
+  if (found) {
+    showResult(found);
+    btn.textContent = '✨ Translate';
+    btn.classList.remove('loading');
+    return;
+  }
+
+  // Use Claude API for unknown phrases
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 200,
+        messages: [{
+          role: 'user',
+          content: `You are a translator for a Pakistani shop management app called Dukan Daftar. Translate the following Roman Urdu or mixed Urdu-English text into clear, natural English. Keep it concise and business-focused. Only return the translation, nothing else.\n\nText: "${input}"`
+        }]
+      })
+    });
+
+    if (!response.ok) throw new Error('API error');
+    const data = await response.json();
+    const translated = data.content?.[0]?.text?.trim() || '';
+
+    if (translated) {
+      showResult(translated);
+    } else {
+      showResult('Translation not available. Try WhatsApp: +92 336 685 9938');
+    }
+  } catch (e) {
+    // Fallback: simple word substitution
+    const fallback = basicTranslate(input);
+    showResult(fallback || `"${input}" — Please WhatsApp us for help: +92 336 685 9938`);
+  }
+
+  btn.textContent = '✨ Translate';
+  btn.classList.remove('loading');
+}
+
+function basicTranslate(text) {
+  const words = {
+    'mujhe':'I need', 'chahiye':'need/want', 'hai':'is/are', 'hain':'are',
+    'kya':'what/is', 'aur':'and', 'ya':'or', 'se':'from/with',
+    'ka':'of/\'s', 'ki':'of', 'ko':'to/for', 'mein':'in/into',
+    'nahi':'not/no', 'haan':'yes', 'theek':'ok/fine', 'bilkul':'absolutely',
+    'karo':'do/please do', 'karna':'to do', 'lena':'to take/receive',
+    'dena':'to give/pay', 'dekhna':'to see/view', 'samjhao':'explain',
+    'bhi':'also/too', 'sirf':'only/just', 'sab':'all/everything',
+    'abhi':'now/immediately', 'kal':'tomorrow/yesterday', 'aaj':'today',
+    'roz':'daily/every day', 'mahine':'month/monthly', 'hafte':'week/weekly',
+    'paisa':'money/amount', 'rupay':'rupees', 'free':'free/at no cost',
+    'app':'app/application', 'phone':'phone/mobile', 'download':'download',
+    'install':'install/set up', 'backup':'backup/save data',
+    'report':'report/summary', 'sale':'sale/sales transaction',
+    'stock':'stock/inventory', 'product':'product/item',
+  };
+  return text.split(' ').map(w => words[w.toLowerCase()] || w).join(' ');
+}
+
+function showResult(text) {
+  const resultBar = document.getElementById('transResultBar');
+  const resultText = document.getElementById('transResultText');
+  resultText.textContent = text;
+  resultBar.style.display = 'block';
+}
+
+function clearTrans() {
+  document.getElementById('transInput').value = '';
+  document.getElementById('transResultBar').style.display = 'none';
+  document.getElementById('transInput').focus();
+}
+
+function copyTrans() {
+  const text = document.getElementById('transResultText').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('transCopyBtn');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 2000);
+  });
+}
+
+/* ── SMOOTH SCROLL ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+  });
+});
+</script>
+</body>
+</html>

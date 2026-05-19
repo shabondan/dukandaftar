@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Privacy Policy — Dukan Daftar</title>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Satoshi:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+:root{
+  --blue:#0A4BBA;--blue2:#082E73;--cyan:#00C8E0;
+  --green:#059669;--bg:#F2F6FF;--card:#fff;
+  --border:#DDE8FF;--text:#05101F;--sub:#4E6080;--sub2:#8FA0C0;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Satoshi',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;}
+
+/* NAV */
+nav{
+  background:linear-gradient(135deg,var(--blue2),var(--blue));
+  padding:16px 6%;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100;
+}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo-svg{width:36px;height:36px;border-radius:11px;overflow:hidden;flex-shrink:0;}
+.nav-logo-name{font-family:'Cabinet Grotesk',sans-serif;font-size:18px;font-weight:900;color:#fff;letter-spacing:-0.4px;}
+.nav-logo-name span{color:var(--cyan);}
+.nav-back{color:rgba(255,255,255,0.7);font-size:13px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:5px;transition:color .2s;}
+.nav-back:hover{color:#fff;}
+
+/* HERO */
+.pp-hero{
+  background:linear-gradient(160deg,var(--blue2),var(--blue),#1565C0);
+  padding:60px 6% 50px;text-align:center;position:relative;overflow:hidden;
+}
+.pp-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(0,200,224,0.12),transparent 60%);}
+.pp-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,200,224,0.15);border:1px solid rgba(0,200,224,0.3);border-radius:100px;padding:6px 18px;font-size:12px;font-weight:700;color:var(--cyan);margin-bottom:20px;letter-spacing:1px;}
+.pp-title{font-family:'Cabinet Grotesk',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:900;color:#fff;letter-spacing:-1.5px;margin-bottom:10px;}
+.pp-sub{font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:6px;}
+.pp-date{font-size:13px;color:rgba(255,255,255,0.4);}
+.pp-urdu{font-family:'Noto Nastaliq Urdu',serif;font-size:16px;color:rgba(255,255,255,0.5);direction:rtl;margin-top:8px;}
+
+/* MAIN */
+.pp-main{max-width:820px;margin:0 auto;padding:60px 5% 80px;}
+
+/* TOC */
+.toc{background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px 32px;margin-bottom:48px;}
+.toc-title{font-family:'Cabinet Grotesk',sans-serif;font-size:16px;font-weight:900;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.toc-list{display:flex;flex-direction:column;gap:8px;}
+.toc-item{display:flex;align-items:center;gap:10px;text-decoration:none;padding:8px 12px;border-radius:10px;transition:background .2s;}
+.toc-item:hover{background:var(--bg);}
+.toc-num{width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;}
+.toc-text{font-size:14px;font-weight:600;color:var(--blue);}
+
+/* SECTION */
+.pp-section{margin-bottom:48px;scroll-margin-top:80px;}
+.pp-section-num{display:inline-flex;align-items:center;gap:10px;margin-bottom:14px;}
+.pp-section-n{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#1565C0);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cabinet Grotesk',sans-serif;font-size:14px;font-weight:900;}
+.pp-section-title{font-family:'Cabinet Grotesk',sans-serif;font-size:22px;font-weight:900;color:var(--text);letter-spacing:-0.4px;}
+.pp-p{font-size:15px;color:var(--sub);margin-bottom:14px;line-height:1.75;}
+.pp-p:last-child{margin-bottom:0;}
+.pp-p strong{color:var(--text);font-weight:700;}
+
+.pp-box{background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px 24px;margin:16px 0;}
+.pp-box-title{font-size:13px;font-weight:800;color:var(--text);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.pp-list{display:flex;flex-direction:column;gap:8px;}
+.pp-li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--sub);line-height:1.6;}
+.pp-li::before{content:'✓';color:var(--green);font-weight:800;flex-shrink:0;margin-top:1px;}
+
+.pp-highlight{background:linear-gradient(135deg,rgba(10,75,186,0.06),rgba(0,200,224,0.04));border:1px solid rgba(10,75,186,0.15);border-radius:14px;padding:18px 22px;margin:16px 0;}
+.pp-highlight-icon{font-size:22px;margin-bottom:8px;}
+.pp-highlight-text{font-size:14px;color:var(--sub);line-height:1.65;}
+
+/* KEY POINTS */
+.key-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;}
+.kp{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;display:flex;gap:12px;align-items:flex-start;}
+.kp-icon{font-size:20px;flex-shrink:0;}
+.kp-title{font-size:13px;font-weight:800;color:var(--text);margin-bottom:4px;}
+.kp-desc{font-size:12.5px;color:var(--sub);line-height:1.55;}
+
+/* CONTACT */
+.pp-contact{background:linear-gradient(135deg,var(--blue2),var(--blue));border-radius:20px;padding:32px;text-align:center;margin-top:48px;}
+.pp-contact-title{font-family:'Cabinet Grotesk',sans-serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:8px;}
+.pp-contact-sub{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:20px;}
+.pp-contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.pp-contact-btn{padding:10px 22px;border-radius:12px;font-size:13px;font-weight:700;text-decoration:none;transition:all .2s;}
+.pp-contact-btn.primary{background:#fff;color:var(--blue);}
+.pp-contact-btn.outline{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;}
+.pp-contact-btn:hover{transform:translateY(-2px);}
+
+/* DIVIDER */
+.pp-divider{height:1px;background:var(--border);margin:32px 0;}
+
+/* FOOTER */
+.pp-footer{background:var(--blue2);padding:28px 6%;text-align:center;}
+.pp-footer-text{font-size:13px;color:rgba(255,255,255,0.4);}
+.pp-footer-urdu{font-family:'Noto Nastaliq Urdu',serif;font-size:13px;color:rgba(255,255,255,0.3);direction:rtl;margin-top:6px;}
+
+@media(max-width:640px){
+  .key-points{grid-template-columns:1fr;}
+  .toc{padding:20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="dukan_daftar_website.html" class="nav-logo">
+    <div class="nav-logo-svg">
+      <svg width="36" height="36" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0D3B6E"/><stop offset="100%" stop-color="#1565A8"/></linearGradient>
+          <linearGradient id="rf" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#02C7DD"/><stop offset="100%" stop-color="#0199B0"/></linearGradient>
+        </defs>
+        <rect x="12" y="12" width="1000" height="1000" rx="200" fill="url(#bg)"/>
+        <polygon points="200,340 512,120 824,340" fill="url(#rf)"/>
+        <rect x="196" y="336" width="632" height="480" rx="10" fill="white" opacity="0.9"/>
+        <rect x="280" y="484" width="464" height="84" rx="12" fill="#0D3B6E"/>
+        <text x="512" y="541" text-anchor="middle" font-family="Arial" font-size="38" font-weight="800" fill="#02C7DD">DD</text>
+      </svg>
+    </div>
+    <div class="nav-logo-name">Dukan <span>Daftar</span></div>
+  </a>
+  <div style="display:flex;align-items:center;gap:10px;"><a href="terms.html" class="nav-back" style="border-color:rgba(245,158,11,0.3);color:var(--gold,#F59E0B);">📜 Terms</a><a href="index.html" class="nav-back">← Website</a></div>
+</nav>
+
+<!-- HERO -->
+<div class="pp-hero">
+  <div class="pp-badge">🔒 Privacy Policy</div>
+  <h1 class="pp-title">Privacy Policy</h1>
+  <p class="pp-sub">Dukan Daftar — Shop Management Application</p>
+  <p class="pp-date">Last Updated: May 14, 2026 &nbsp;·&nbsp; Effective: May 14, 2026</p>
+  <div class="pp-urdu">رازداری کی پالیسی — دکان دفتر ایپلیکیشن</div>
+</div>
+
+<!-- MAIN -->
+<div class="pp-main">
+
+  <!-- Quick Summary -->
+  <div class="key-points">
+    <div class="kp">
+      <div class="kp-icon">💾</div>
+      <div>
+        <div class="kp-title">Offline First</div>
+        <div class="kp-desc">Your data stays on your device. We don't send it to any server.</div>
+      </div>
+    </div>
+    <div class="kp">
+      <div class="kp-icon">🚫</div>
+      <div>
+        <div class="kp-title">No Data Selling</div>
+        <div class="kp-desc">We never sell, rent, or share your personal data with third parties.</div>
+      </div>
+    </div>
+    <div class="kp">
+      <div class="kp-icon">☁️</div>
+      <div>
+        <div class="kp-title">Optional Cloud Backup</div>
+        <div class="kp-desc">Google Drive backup is fully optional. You control when and what is backed up.</div>
+      </div>
+    </div>
+    <div class="kp">
+      <div class="kp-icon">🔐</div>
+      <div>
+        <div class="kp-title">PIN Protected</div>
+        <div class="kp-desc">App access is secured by a local PIN that only you know.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pp-highlight">
+    <div class="pp-highlight-icon">ℹ️</div>
+    <div class="pp-highlight-text"><strong>Simple Version:</strong> Dukan Daftar is an offline-first app. All your shop data — products, sales, credit records, expenses — is stored locally on your phone. We do not have access to it. Optional Google Drive backup is the only way data leaves your device, and you fully control that feature.</div>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <div class="toc-title">📋 Table of Contents</div>
+    <div class="toc-list">
+      <a href="#s1" class="toc-item"><div class="toc-num">1</div><div class="toc-text">Information We Collect</div></a>
+      <a href="#s2" class="toc-item"><div class="toc-num">2</div><div class="toc-text">How We Use Your Information</div></a>
+      <a href="#s3" class="toc-item"><div class="toc-num">3</div><div class="toc-text">Data Storage &amp; Security</div></a>
+      <a href="#s4" class="toc-item"><div class="toc-num">4</div><div class="toc-text">Google Drive Backup</div></a>
+      <a href="#s5" class="toc-item"><div class="toc-num">5</div><div class="toc-text">Third-Party Services</div></a>
+      <a href="#s6" class="toc-item"><div class="toc-num">6</div><div class="toc-text">Permissions We Request</div></a>
+      <a href="#s7" class="toc-item"><div class="toc-num">7</div><div class="toc-text">Children's Privacy</div></a>
+      <a href="#s8" class="toc-item"><div class="toc-num">8</div><div class="toc-text">Your Rights &amp; Choices</div></a>
+      <a href="#s9" class="toc-item"><div class="toc-num">9</div><div class="toc-text">Data Retention &amp; Deletion</div></a>
+      <a href="#s10" class="toc-item"><div class="toc-num">10</div><div class="toc-text">Changes to This Policy</div></a>
+      <a href="#s11" class="toc-item"><div class="toc-num">11</div><div class="toc-text">Contact Us</div></a>
+    </div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="pp-section" id="s1">
+    <div class="pp-section-num">
+      <div class="pp-section-n">1</div>
+      <div class="pp-section-title">Information We Collect</div>
+    </div>
+    <p class="pp-p">Dukan Daftar is designed as an <strong>offline-first application</strong>. The vast majority of data you enter into the app stays entirely on your device and is never transmitted to us or any third party.</p>
+    <div class="pp-box">
+      <div class="pp-box-title">📱 Data You Enter Into the App (Stored Locally Only)</div>
+      <div class="pp-list">
+        <div class="pp-li">Shop name, owner name, and contact details (setup information)</div>
+        <div class="pp-li">Product names, prices, barcodes, and stock quantities</div>
+        <div class="pp-li">Customer names, phone numbers, and credit balances</div>
+        <div class="pp-li">Supplier names, contact info, and purchase records</div>
+        <div class="pp-li">Sales transactions, receipts, and daily records</div>
+        <div class="pp-li">Expense records and categories</div>
+        <div class="pp-li">PIN lock code (stored locally, encrypted)</div>
+      </div>
+    </div>
+    <div class="pp-box">
+      <div class="pp-box-title">📊 Data We May Collect Automatically (Anonymized)</div>
+      <div class="pp-list">
+        <div class="pp-li">Crash reports and error logs (to fix bugs — contains no personal data)</div>
+        <div class="pp-li">General app usage analytics (screens visited, features used — no business data)</div>
+        <div class="pp-li">Device type and Android version (for compatibility improvements)</div>
+      </div>
+    </div>
+    <p class="pp-p">We <strong>never</strong> collect your actual business data, customer information, transaction amounts, or any shop-specific content.</p>
+  </div>
+
+  <div class="pp-divider"></div>
+
+  <!-- SECTION 2 -->
+  <div class="pp-section" id="s2">
+    <div class="pp-section-num">
+      <div class="pp-section-n">2</div>
+      <div class="pp-section-title">How We Use Your Information</div>
+    </div>
+    <p class="pp-p">The limited anonymized data we may collect is used exclusively to:</p>
+    <div class="pp-box">
+      <div class="pp-list">
+        <div class="pp-li">Fix bugs and crashes reported through automated crash reporting</div>
+        <div class="pp-li">Improve app performance and user experience</div>
+        <div class="pp-li">Understand which features are most useful to plan future updates</div>
+        <div class="pp-li">Ensure compatibility with different Android device models</div>
+      </div>
+    </div>
+    <p class="pp-p">We <strong>do not</strong> use your information for advertising, profiling, or any commercial purpose beyond operating and improving the app.</p>
+  </div>
+
+  <div class="pp-divider"></div>
+
+  <!-- SECTION 3 -->
+  <div class="pp-section" id="s3">
+    <div class="pp-section-num">
+      <div class="pp-section-n">3</div>
+      <div class="pp-section-title">Data Storage &amp; Security</div>
+    </div>
+    <p class="pp-p">All your business data is <strong>stored locally on your device</strong> using the device's secure local storage. This means:</p>
+    <div class="pp-box">
+      <div class="pp-list">
+        <div class="pp-li">Your data never leaves your phone unless you explicitly choose to back it up</div>
+        <div class="pp-li">No internet connection is required to use the core features of the app</div>
+        <div class="pp-li">Even without internet (load shedding, no SIM), the app works completely normally</div>
+        <div class="pp-li">Your PIN is stored in encrypted form — we cannot access it</div>
+        <div class="pp-li">Uninstalling the app will delete all local data from the device</div>
+      </div>
+    </div>
+    <div class="pp-highlight">
+      <div class="pp-highlight-icon">🔒</div>
+      <div class="pp-highlight-text"><strong>Security Note:</strong> We strongly recommend setting a PIN lock and taking regular local backups. If your phone is lost or reset, local data may be unrecoverable unless you have a backup saved to Google Drive or your device storage.</div>
+    </div>
+  </div>
+
+  <div class="pp-divider"></div>
+
+  <!-- SECTION 4 -->
+  <div class="pp-section" id="s4">
+    <div class="pp-section-num">
+      <div class="pp-section-n">4</div>
+      <div class="pp-section-title">Google Drive Backup</div>
+    </div>
+    <p class="pp-p">Dukan Daftar offers an <strong>optional Google Drive backup feature</strong> available in our Enterprise plan. Here is exactly how it works:</p>
+    <div class="pp-box">
+      <div class="pp-box-title">☁️ How Google Drive Backup Works</div>
+      <div class="pp-list">
+        <div class="pp-li">You must explicitly connect your Google account to enable this feature</div>
+        <div class="pp-li">Your backup file is saved to <strong>your own Google Drive account</strong> — not ours</div>
+        <div class="pp-li">We do not have access to your Google Drive or the backup files</div>
+        <div class="pp-li">The backup contains an encrypted copy of your local database</div>
+        <div class="pp-li">You can delete your backup from Google Drive at any time</div>
+        <div class="pp-li">You can disconnect your Google account from the app at any time in Settings</div>
+      </div>
+    </div>
+    <p class="pp-p">Google Drive is governed by <strong>Google's own Privacy Policy</strong> (policies.google.com). By using the Google Drive backup feature, you agree to Google's Terms of Service in addition to ours.</p>
+  </div>
+
+  <div class="pp-divider"></div>
+
+  <!-- SECTION 5 -->
+  <div class="pp-section" id="s5">
+    <div class="pp-section-num">
+      <div class="pp-section-n">5</div>
+      <div class="pp-section-title">Third-Party Services</div>
+    </div>
+    <p class="pp-p">Dukan Daftar may use the following third-party services, each governed by their own privacy policies:</p>
+    <div class="pp-box">
+      <div class="pp-list">
+        <div class="pp-li"><strong>Google Drive API</strong> — for optional cloud backup (Enterprise plan only). Governed by Google's Privacy Policy.</div>
+        <div class="pp-li"><strong>Firebase Crashlytics</strong> — for crash reporting and stability improvements. Collects anonymized crash data only, no personal information.</div>
+        <div class="pp-li"><strong>Google Play Services</strong> — for app distribution and basic Android services.</div>
+      </div>
+    </div>
+    <p class="pp-p">We do <strong>not</strong> use any advertising networks, social media trackers, or marketing analytics tools in the app.</p>
+  </div>
+
+  <div class="pp-divider"></div>
+
+  <!-- SECTION 6 -->
+  <div class="pp-section" id="s6">
+    <div class="pp-section-num">
+      <div class="pp-section-n">6</div>
+      <div class="pp-section-title">Permissions We Request</div>
+    </div>
+    <p class="pp-p">Dukan Daftar requests the following Android permissions and here is exactly why each one is needed:</p>
+    <div class="pp-box">
+      <div class="pp-list">
+        <div class="pp-li"><strong>Camera</strong> — to scan product barcodes for quick sale and inventory updates. No photos are captured or stored by the app.</div>
+        <div class="pp-li"><strong>Storage / File Access</strong> — to save local backup files to your device's storage so you can later restore your data.</div>
+        <div class="pp-li"><strong>Internet</strong> — only used for Google Drive backup sync (optional) and crash reporting. Not required for daily use.</div>
+        <div class="pp-li"><strong>Bluetooth</strong> — to connect with Bluetooth thermal receipt printers (Enterprise plan only).</div>
+        <div class="pp-li"><strong>Vibration</strong> — for haptic feedback on barcode scan success.</div>
+      </div>
+    </div>
+    <p class="pp-p">You can revoke any permission at any time through your Android device settings. Revoking camera permission will disable barcode scanning. Revoking storage permission will disable local backup.</p>
+  </div>
+
+  <div class="pp-divider"></div>
+
+  <!-- SECTION 7 -->
+  <div class="pp-section" id="s7">
+    <div class="pp-section-num">
+      <div class="pp-section-n">7</div>
+      <div class="pp-section-title">Children's Privacy</div>
+    </div>
+    <p class="pp-p">Dukan Daftar is a <strong>business management application</strong> intended for use by adults operating shops and retail businesses. It is not directed at or designed for children under 13 years of age.</p>
+    <p class="pp-p">We do not knowingly collect any personal information from children under 13. If you believe a child under 13 has provided information through our app, please contact us at <strong>info@dukandaftar.pk</strong> and we will promptly address the situation.</p>
+  </div>
+
+  <div class="pp-divider"></div>
+
+  <!-- SECTION 8 -->
+  <div class="pp-section" id="s8">
+    <div class="pp-section-num">
+      <div class="pp-section-n">8</div>
+      <div class="pp-section-title">Your Rights &amp; Choices</div>
+    </div>
+    <p class="pp-p">Since your business data is stored locally on your device, you have complete control over it at all times:</p>
+    <div class="pp-box">
+      <div class="pp-list">
+        <div class="pp-li"><strong>Access:</strong> All your data is visible and accessible within the app at any time.</div>
+        <div class="pp-li"><strong>Export:</strong> You can export your data as a backup file at any time from Settings → Backup.</div>
+        <div class="pp-li"><strong>Delete:</strong> Uninstalling the app permanently deletes all local data. You can also clear individual records from within the app.</div>
+        <div class="pp-li"><strong>Opt out of analytics:</strong> You can disable crash reporting and analytics in Settings → Privacy.</div>
+        <div class="pp-li"><strong>Google Drive disconnect:</strong> You can disconnect your Google account at any time in Settings → Backup → Google Drive.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pp-divider"></div>
+
+  <!-- SECTION 9 -->
+  <div class="pp-section" id="s9">
+    <div class="pp-section-num">
+      <div class="pp-section-n">9</div>
+      <div class="pp-section-title">Data Retention &amp; Deletion</div>
+    </div>
+    <p class="pp-p"><strong>Local data:</strong> Your business data is retained on your device for as long as the app is installed and you choose to keep it. Uninstalling the app deletes all local data permanently.</p>
+    <p class="pp-p"><strong>Google Drive backups:</strong> Backup files in your Google Drive are retained until you delete them manually from your Google Drive account or disconnect the app.</p>
+    <p class="pp-p"><strong>Crash reports:</strong> Anonymized crash data is automatically deleted from our analytics systems after 90 days.</p>
+    <p class="pp-p">We do not retain any identifiable user data on our servers because we do not have servers that hold your personal or business data.</p>
+  </div>
+
+  <div class="pp-divider"></div>
+
+  <!-- SECTION 10 -->
+  <div class="pp-section" id="s10">
+    <div class="pp-section-num">
+      <div class="pp-section-n">10</div>
+      <div class="pp-section-title">Changes to This Policy</div>
+    </div>
+    <p class="pp-p">We may update this Privacy Policy from time to time to reflect changes in the app, legal requirements, or our practices. When we make significant changes, we will:</p>
+    <div class="pp-box">
+      <div class="pp-list">
+        <div class="pp-li">Update the "Last Updated" date at the top of this page</div>
+        <div class="pp-li">Show an in-app notification about the changes</div>
+        <div class="pp-li">Post the updated policy on our website at dukandaftar.pk</div>
+      </div>
+    </div>
+    <p class="pp-p">Continued use of the app after changes are posted constitutes acceptance of the updated policy. We encourage you to review this policy periodically.</p>
+  </div>
+
+  <div class="pp-divider"></div>
+
+  <!-- SECTION 11 -->
+  <div class="pp-section" id="s11">
+    <div class="pp-section-num">
+      <div class="pp-section-n">11</div>
+      <div class="pp-section-title">Contact Us</div>
+    </div>
+    <p class="pp-p">If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your data, please reach out to us. We typically respond within 48 hours.</p>
+
+    <div class="pp-contact">
+      <div class="pp-contact-title">Get in Touch</div>
+      <div class="pp-contact-sub">We're here to help — in English یا اردو میں</div>
+      <div class="pp-contact-links">
+        <a href="mailto:info@dukandaftar.com" class="pp-contact-btn primary">✉️ info@dukandaftar.com</a>
+        <a href="https://wa.me/923366859938" class="pp-contact-btn outline" target="_blank">💬 WhatsApp</a>
+        <a href="tel:+923366859938" class="pp-contact-btn outline">📞 +92 336 685 9938</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="pp-footer">
+  <div class="pp-footer-text">© 2026 Dukan Daftar · Privacy Policy · Last Updated May 14, 2026</div>
+  <div class="pp-footer-urdu">دکان دفتر — آپ کی رازداری ہماری ذمہ داری</div>
+</div>
+
+</body>
+</html>
